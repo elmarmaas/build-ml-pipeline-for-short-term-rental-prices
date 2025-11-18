@@ -1,0 +1,45 @@
+name: basic_cleaning
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      input_artifact:
+        description: Original dataset
+        type: str
+        default: "sample.csv:latest"
+
+      output_artifact:
+        description: Cleaned dataset
+        type: str
+        default: "clean_sample.csv"
+
+      output_type:
+        description: Type of the output artifact
+        type: str
+        default: "cleaned_data"
+
+      output_description:
+        description: Description of the cleaned dataset
+        type: str
+        default: "Cleaned data containing listings between min_price and max_price"
+
+      min_price:
+        description: Minimum price to filter the dataset
+        type: float
+        default: 10.0
+
+      max_price:
+        description: Maximum price to filter the dataset
+        type: float
+        default: 350.0
+
+
+    command: >-
+        python run.py  --input_artifact {input_artifact} \
+                       --output_artifact {output_artifact} \
+                       --output_description {output_description} \
+                       --output_type {output_type} \
+                       --min_price {min_price} \
+                       --max_price {max_price}
