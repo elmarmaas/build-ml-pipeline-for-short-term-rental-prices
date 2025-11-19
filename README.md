@@ -1,3 +1,41 @@
+# Submission of Exercise
+Author of completing the exercise: Elmar Maas
+
+Date of completion: 2025-11-19
+
+This GitHub Repository: https://github.com/elmarmaas/build-ml-pipeline-for-short-term-rental-prices.git
+
+Weights and Biases project: https://wandb.ai/elmar-maas-cariad-se-udacity-training-only-not-in-produc/nyc_airbnb/overview
+
+**Unfortunately it seems I have created a Wheights&Biases account where I cannot make projects public.** If you (reviewer) give me your E-Mail account I can try to add you to the "Team" and hopefully then you can then see the data. Alternatively I can also offer to give you my account login for review (as I only have Udacity training data on this account...)
+Additionally I am providing screenshots:
+
+![Wandb Settings Problem](./wandb_screenshots/2025-11-17_Settings_Problem_in_WANDB.png)
+
+*W&B Settings Problem - not possible to make project public
+
+
+![Wandb NYC Airbnb Overview](./wandb_screenshots/2025-11-19_WANDB_Project_NYC_Overview.png)
+
+*W&B Project Overview
+
+![Wandb NYC Airbnb Runs Overview](./wandb_screenshots/2025-11-19_Runs_Overview.png)
+
+*W&B Runs Overview
+
+![Wandb NYC Airbnb Artifacts Overview](./wandb_screenshots/2025-11-19_Artifacts_Overview.png)
+
+*W&B Artifacts Overview
+
+![Wandb NYC Airbnb Linage for Exported Model](./wandb_screenshots/2025-11-19_Model_export_Lineage.png)
+
+*W&B Exported Model Lineage
+
+If this is not enough please either request additional screenshots or let me know how to make the W&B account public or how to create a public account such that I can rerun the exercise on that account. Thanks! 
+
+---
+---
+
 # Build an ML Pipeline for Short-Term Rental Prices in NYC
 You are working for a property management company renting rooms and properties for short periods of 
 time on various rental platforms. You need to estimate the typical price for a given property based 
@@ -6,30 +44,38 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
+
 ## Table of contents
 
-- [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
-- [Preliminary steps](#preliminary-steps)
-  * [Fork the Starter Kit](#fork-the-starter-kit)
-  * [Create environment](#create-environment)
-  * [Get API key for Weights and Biases](#get-api-key-for-weights-and-biases)
-  * [Cookie cutter](#cookie-cutter)
-  * [The configuration](#the-configuration)
-  * [Running the entire pipeline or just a selection of steps](#Running-the-entire-pipeline-or-just-a-selection-of-steps)
-  * [Pre-existing components](#pre-existing-components)
-- [Instructions](#instructions)
-  * [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-  * [Data cleaning](#data-cleaning)
-  * [Data testing](#data-testing)
-  * [Data splitting](#data-splitting)
-  * [Train Random Forest](#train-random-forest)
-  * [Optimize hyperparameters](#optimize-hyperparameters)
-  * [Select the best model](#select-the-best-model)
-  * [Test](#test)
-  * [Visualize the pipeline](#visualize-the-pipeline)
-  * [Release the pipeline](#release-the-pipeline)
-  * [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
-- [Cleaning up](#cleaning-up)
+- [Submission of Exercise](#submission-of-exercise)
+- [Build an ML Pipeline for Short-Term Rental Prices in NYC](#build-an-ml-pipeline-for-short-term-rental-prices-in-nyc)
+  - [Table of contents](#table-of-contents)
+  - [Preliminary steps](#preliminary-steps)
+    - [Supported Operating Systems](#supported-operating-systems)
+    - [Python Requirement](#python-requirement)
+    - [Fork the Starter kit](#fork-the-starter-kit)
+    - [Create environment](#create-environment)
+    - [Get API key for Weights and Biases](#get-api-key-for-weights-and-biases)
+    - [Cookie cutter](#cookie-cutter)
+    - [The configuration](#the-configuration)
+    - [Running the entire pipeline or just a selection of steps](#running-the-entire-pipeline-or-just-a-selection-of-steps)
+    - [Pre-existing components](#pre-existing-components)
+  - [Instructions](#instructions)
+    - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+  - [Data cleaning](#data-cleaning)
+    - [Data testing](#data-testing)
+    - [Data splitting](#data-splitting)
+    - [Train Random Forest](#train-random-forest)
+    - [Optimize hyperparameters](#optimize-hyperparameters)
+    - [Select the best model](#select-the-best-model)
+    - [Test](#test)
+    - [Visualize the pipeline](#visualize-the-pipeline)
+    - [Release the pipeline](#release-the-pipeline)
+    - [Train the model on a new data sample](#train-the-model-on-a-new-data-sample)
+  - [In case of errors](#in-case-of-errors)
+    - [Environments](#environments)
+    - [MLflow \& Wandb](#mlflow--wandb)
+  - [License](#license)
 
 ## Preliminary steps
 
